@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OTP Verification</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      background-color: #1a1a1a;
+      color: #ffffff;
+    }
+    #message {
+      margin-top: 20px;
+      font-size: 1.5em;
+    }
+    input, button {
+      padding: 10px;
+      margin: 5px;
+      border-radius: 5px;
+      border: 1px solid #00ff88;
+      background-color: #2a2a2a;
+      color: #ffffff;
+    }
+    button {
+      background-color: #00ff88;
+      color: #1a1a1a;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Enter OTP</h1>
+  <input type="text" id="otpInput" placeholder="Enter OTP" oninput="clearPreviousOTP()">
+  <button onclick="verifyOTP()">Submit</button>
+  <div id="message"></div>
+
+  <script>
+    
+    function clearPreviousOTP() {
+      const messageDiv = document.getElementById('message');
+      messageDiv.textContent = ''; 
+    }
+
+    async function verifyOTP() {
+      const otp = document.getElementById('otpInput').value;
+      const response = await fetch('/verify-otp', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ otp }),
+      });
+      const result = await response.json();
+      const messageDiv = document.getElementById('message');
+      if (result.success) {
+        messageDiv.textContent = result.message;
+        messageDiv.style.color = '#00ff88';
+        // Redirect to dashboard after 2 seconds
+        setTimeout(() => {
+          window.location.href = '/dashboard';
+        }, 2000);
+      } else {
+        messageDiv.textContent = result.message;
+        messageDiv.style.color = '#ff4444';
+      }
+    }
+  </script>
+</body>
+</html>

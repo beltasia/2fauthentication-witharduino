@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Portfolio</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .dashboard {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #2a2a2a;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .name {
+            font-size: 2.5em;
+            color: #00ff88;
+            margin-bottom: 10px;
+        }
+
+        .stocks-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .stock-card {
+            background-color: #333333;
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .stock-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stock-name {
+            color: #00ff88;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .stock-details div {
+            margin: 10px 0;
+        }
+
+        .total-value {
+            text-align: center;
+            font-size: 1.5em;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #333333;
+            border-radius: 10px;
+        }
+
+        .currency {
+            color: #888888;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="header">
+            <div class="name">Mellisa B Sialumba</div>
+            <h2>Investment Portfolio</h2>
+        </div>
+
+        <div class="stocks-container">
+            <div class="stock-card">
+                <div class="stock-name">Econet Wireless Zimbabwe</div>
+                <div class="stock-details">
+                    <div>Shares: 15,000</div>
+                    <div>Current Price: <span class="currency">ZWL$</span>850.50</div>
+                    <div>Value: <span class="currency">ZWL$</span>12,757,500</div>
+                </div>
+            </div>
+
+            <div class="stock-card">
+                <div class="stock-name">Delta Corporation</div>
+                <div class="stock-details">
+                    <div>Shares: 8,200</div>
+                    <div>Current Price: <span class="currency">ZWL$</span>1,230.75</div>
+                    <div>Value: <span class="currency">ZWL$</span>10,092,150</div>
+                </div>
+            </div>
+
+            <div class="stock-card">
+                <div class="stock-name">CBZ Holdings</div>
+                <div class="stock-details">
+                    <div>Shares: 22,500</div>
+                    <div>Current Price: <span class="currency">ZWL$</span>425.00</div>
+                    <div>Value: <span class="currency">ZWL$</span>9,562,500</div>
+                </div>
+            </div>
+
+            <div class="stock-card">
+                <div class="stock-name">Innscor Africa</div>
+                <div class="stock-details">
+                    <div>Shares: 12,000</div>
+                    <div>Current Price: <span class="currency">ZWL$</span>680.40</div>
+                    <div>Value: <span class="currency">ZWL$</span>8,164,800</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="total-value">
+            Total Portfolio Value: <span class="currency">ZWL$</span>40,576,950
+        </div>
+    </div>
+</body>
+</html>
