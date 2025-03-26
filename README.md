@@ -96,4 +96,8 @@ The system consists of:
 
 ## Acknowledgments
 - **Arduino Community**: For providing excellent documentation and libraries.
-- **Node.js Community**: For creating a robust and scalable backend framework.
+- **Node.js Community**: For creating a robust and scalable backend framework
+  
+ 4. ## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
