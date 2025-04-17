@@ -30,7 +30,10 @@ The system consists of:
 - **Real-Time Communication**: Serial communication between Arduino and Node.js ensures fast and reliable data transfer.
 - **User-Friendly Interface**: Intuitive web interface for OTP entry and dashboard access.
 
----
+## Tchnologies Used
+- ![Arduino](https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white)
+- ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
 ## Hardware Requirements
 - **Arduino Uno**
