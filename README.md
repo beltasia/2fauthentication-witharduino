@@ -82,6 +82,7 @@ The system consists of:
 ### 3. Web Interface
 1. Open your browser and navigate to `http://localhost:3000`.
 2. Use the web interface to enter the OTP and access the dashboard.
+https://drive.google.com/file/d/1kQCCfgCxMO32iB9I5QS5457YfKpLetA8/view?usp=drivesdk
 
 ---
 
